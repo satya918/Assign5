@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build Service 1') {
+            steps {
+                dir('service1') {
+                    // Build the Docker image for service1
+                    sh 'docker build -t service1-image .'
+                }
+            }
+        }
+
+        stage('Build Service 2') {
+            steps {
+                dir('service2') {
+                    // Build the Docker image for service2
+                    sh 'docker build -t service2-image .'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Assuming you have Docker Compose installed on the Jenkins server
+                sh 'docker-compose up -d'
+            }
+        }
+    }
+}
