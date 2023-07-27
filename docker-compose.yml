@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  service1:
+    build:
+      context: ./service1
+    # Add any additional configurations for service1, such as ports, environment variables, etc.
+
+  service2:
+    build:
+      context: ./service2
+    # Add any additional configurations for service2, such as ports, environment variables, etc.
+
+# Add any network and volume definitions if needed
+
