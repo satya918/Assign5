@@ -34,17 +34,14 @@ pipeline {
             }
         }
 
-        stage('Integration Tests') {
-            steps {
-                // Perform integration tests for all services
-            }
-        }
+       
 
         stage('Deploy') {
             steps {
                     sh 'docker-compose up -d'
             }
         }
+    }
  post {
         success {
             echo 'CI/CD process completed successfully!'
@@ -54,4 +51,4 @@ pipeline {
         }
     }
     }
-}
+
