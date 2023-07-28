@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir('service1') {
                     // Build the Docker image for service1
-                    sh 'sudo docker build -t satya918/service1:latest .'
+                    sh 'docker build -t satya918/service1:latest .'
 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 dir('service2') {
                     // Build the Docker image for service2
-                    sh 'sudo docker build -t satya918/service2:latest .'
+                    sh 'docker build -t satya918/service2:latest .'
                 }
             }
         }
