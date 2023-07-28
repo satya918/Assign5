@@ -7,7 +7,7 @@ pipeline {
                 // Checkout the source code from the GitHub repository
                 git credentialsId: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, url{https://github.com/satya918/Assign5.git
                     
-                    }
+                    
         }
 
         stage('Build Service 1') {
