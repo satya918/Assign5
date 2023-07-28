@@ -9,7 +9,7 @@ pipeline {
                     
                     
         
-
+   stages {
         stage('Build Service 1') {
             steps {
                 dir('service1') {
@@ -18,7 +18,7 @@ pipeline {
                 }
             }
         }
-
+   stages {
         stage('Build Service 2') {
             steps {
                 dir('service2') {
@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-
+   stages {
         stage('Unit Tests') {
             steps {
                 dir('service1') {
@@ -41,7 +41,7 @@ pipeline {
                 }
             }
         }
-
+   stages {
         stage('Integration Tests') {
             steps {
                 // Assuming you have integration tests defined for the entire application
@@ -50,7 +50,7 @@ pipeline {
                 // The specifics will depend on your application and testing setup
             }
         }
-
+   stages {
         stage('Deploy') {
             steps {
                 // Assuming you have a Docker Compose file (docker-compose.yml) in the root of your project
