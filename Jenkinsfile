@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Checkout') {
             steps {
@@ -17,7 +16,7 @@ pipeline {
                     sh 'docker build -t satya918/service1:latest .'
                 }
             }
-        }
+        
    stages {
         stage('Build Service 2') {
             steps {
@@ -58,7 +57,7 @@ pipeline {
                 sh 'docker-compose up -d'
             }
         }
-    }
+   }
 
     post {
         success {
